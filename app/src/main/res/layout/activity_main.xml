@@ -8,12 +8,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btn_get"
+        android:textSize="20sp"
+        android:text="请求Bean"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
     <TextView
         android:layout_gravity="center"
         android:id="@+id/id_tv"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="Hello World!" />
+
+    <ImageView
+        android:id="@+id/id_iv"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
 
 </LinearLayout>

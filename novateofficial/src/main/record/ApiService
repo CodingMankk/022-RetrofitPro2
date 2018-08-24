@@ -1,0 +1,21 @@
+public interface ServiceAPI {
+    //商品展示
+    //http://apiv3.yangkeduo.com/v5/newlist?page=1&size=20&ver=1512745500001&pdduid=3470667255
+    @GET("{v5}/{newlist}")
+    Flowable<ShowGoodsBean> getShowGoods(@Path("v5")String s,@Path("newlist")String str, @Query("page")int i,@Query("size")int o,@Query("ver")String p,@Query("pdduid")String w);
+
+  //商品详情
+    @GET("{v5}/{goods}/{goods_id}")
+    Flowable<XQBean> getXQGoods(@Path("v5")String s, @Path("goods")String str, @Path("goods_id")int a, @Query("pdduid")String w);
+
+  	 //http://apiv4.yangkeduo.com/reviews/202517471?page=1&size=2&label=1&is_back=1&pdduid=3470667255
+  	//用户评论
+ 		 @GET("{reviews}/{goods_id}")
+ 		 Flowable<UserBean> getUserSay(@Path("reviews")String s, @Path("goods_id")int id, @Query("page")int i, @Query("size")int o, @Query("label")int p, @Query("is_back")int  w, @Query("pdduid")String m);
+
+
+
+    //http://apiv4.yangkeduo.com/recommendation/mall?goods_id=202517471&pdduid=3470667255
+    //店铺推荐
+    @GET("{recommendation}/{mall}")
+    Flowable<DianPuBean> getDianPu(@Path("recommendation")String s, @Path("mall")String id,@Query("goods_id")int i, @Query("pdduif")String o);

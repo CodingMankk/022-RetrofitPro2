@@ -37,4 +37,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     compile 'com.tamic.novate:novate:1.5.3'
+
+    compile 'com.orhanobut:logger:1.15'
+
+
 }

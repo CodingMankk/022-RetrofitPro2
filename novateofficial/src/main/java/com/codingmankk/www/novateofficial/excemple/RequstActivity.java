@@ -11,6 +11,7 @@ import com.codingmankk.www.novateofficial.R;
 import com.codingmankk.www.novateofficial.excemple.model.MusicBookCategory;
 import com.codingmankk.www.novateofficial.excemple.model.ResultModel;
 import com.google.gson.reflect.TypeToken;
+import com.orhanobut.logger.Logger;
 import com.tamic.novate.Novate;
 import com.tamic.novate.Throwable;
 import com.tamic.novate.callback.RxBitmapCallback;
@@ -289,7 +290,6 @@ public class RequstActivity extends AppCompatActivity {
      * performGet
      */
     private void performGet() {
-
         Map<String, Object> parameters = new HashMap<String, Object>();
         parameters.put("ip", "21.22.11.33");
         novate = new Novate.Builder(this)
@@ -317,8 +317,10 @@ public class RequstActivity extends AppCompatActivity {
             @Override
             public void onNext(Object tag, int code, String message, ResultModel response) {
                 Toast.makeText(RequstActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
+                Logger.i(response.toString());
             }
         });
+
     }
 
 

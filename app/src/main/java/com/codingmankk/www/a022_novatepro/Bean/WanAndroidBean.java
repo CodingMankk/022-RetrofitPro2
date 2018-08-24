@@ -84,6 +84,18 @@ public class WanAndroidBean {
             this.total = total;
         }
 
+        @Override
+        public String toString() {
+            return "BannerData{" +
+                    "curPage=" + curPage +
+                    ", datas=" + datas +
+                    ", offset=" + offset +
+                    ", over=" + over +
+                    ", pageCount=" + pageCount +
+                    ", size=" + size +
+                    ", total=" + total +
+                    '}';
+        }
     }
 
     public class ItemWan{
@@ -344,5 +356,12 @@ public class WanAndroidBean {
     }
 
 
-
+    @Override
+    public String toString() {
+        return "WanAndroidBean{" +
+                "data=" + data +
+                ", errorCode='" + errorCode + '\'' +
+                ", errorMsg='" + errorMsg + '\'' +
+                '}';
+    }
 }
